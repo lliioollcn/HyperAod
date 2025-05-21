@@ -52,7 +52,7 @@ object LyricPage : BasePage() {
                 lyricEnable = it
                 prefs.edit { putBoolean("lyric_enable", it) }
             }
-            // TODO: 全项展开
+            /*
             MenuSwitch.view("歌词图标", iconEnable) {
                 iconEnable = it
                 prefs.edit { putBoolean("lyric_icon", it) }
@@ -69,10 +69,13 @@ object LyricPage : BasePage() {
                 }
             }
 
+             */
+
             // 设置文字大小
             MenuSlide.view("文字大小", prefs.getFloat("lyric_text_size", 25f), range = 1f..50f) {
                 prefs.edit { putFloat("lyric_text_size", it) }
             }
+            /*
             // 设置彩虹文字
             MenuSwitch.view("动态渐变", rainbowEnable) {
                 rainbowEnable = it
@@ -88,14 +91,19 @@ object LyricPage : BasePage() {
                     prefs.edit { putFloat("lyric_rainbow_duration", it) }
                 }
             }
+
+             */
             // 设置文字颜色
-            MenuColorEdit.view("渐变颜色1", prefs.getString("lyric_text_color1", "#FF0000")) {
+            MenuColorEdit.view("文字颜色", prefs.getString("lyric_text_color1", "#FFFFFF")) {
                 prefs.edit { putString("lyric_text_color1", it) }
             }
+            /*
             // 设置文字颜色
             MenuColorEdit.view("渐变颜色2", prefs.getString("lyric_text_color2", "#FF7F00")) {
                 prefs.edit { putString("lyric_text_color2", it) }
             }
+
+             */
 
             var lyricLocation by remember { mutableStateOf(prefs.getInt("lyric_location", 0)) }
             var enterAnim by remember { mutableStateOf(prefs.getInt("lyric_enter_anim", 0)) }
@@ -121,7 +129,7 @@ object LyricPage : BasePage() {
             }
 
             // 设置动画时长
-            MenuSlide.view("动画时长", prefs.getFloat("lyric_anim_duration", 800f), range = 0f..10000f) {
+            MenuSlide.view("动画时长", prefs.getFloat("lyric_anim_duration", 300f), range = 0f..10000f) {
                 prefs.edit { putFloat("lyric_anim_duration", it) }
             }
 

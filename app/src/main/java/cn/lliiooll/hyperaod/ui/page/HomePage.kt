@@ -52,6 +52,10 @@ object HomePage : BasePage() {
 
              */
 
+            MenuSelect.view("其他设置") {
+                navController.navigate("others")
+            }
+
         }
     }
 

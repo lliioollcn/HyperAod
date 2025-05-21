@@ -7,10 +7,8 @@ import android.view.View
 import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import android.view.animation.TranslateAnimation
-import android.widget.ImageView
-import android.widget.RelativeLayout
-import android.widget.TextSwitcher
-import android.widget.ViewSwitcher
+import android.widget.*
+import cn.lliiooll.hyperaod.color
 import cn.lliiooll.hyperaod.ui.aod.text.RainbowTextView
 import com.highcapable.yukihookapi.hook.log.YLog
 
@@ -34,9 +32,9 @@ class SuperLyricView : RelativeLayout, ViewSwitcher.ViewFactory {
     var rainbowEnable = false// 彩虹歌词开关
 
     val rule = mutableMapOf<Int, Int>().apply {
-        this[0] = CENTER_IN_PARENT
-        this[1] = ALIGN_PARENT_LEFT
-        this[2] = ALIGN_PARENT_RIGHT
+        this[0] = Gravity.CENTER
+        this[1] = Gravity.START
+        this[2] = Gravity.END
     }
 
     // 进入动画
@@ -127,16 +125,18 @@ class SuperLyricView : RelativeLayout, ViewSwitcher.ViewFactory {
         // 设置退出动画
         lyricSwitcher.outAnimation = animsExit[textExitAnim]
         // 设置切换器位置
-        val layoutParams = LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT)
-        layoutParams.addRule(rule[textLocation]!!)
+        val layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT)
+        //layoutParams.addRule(rule[textLocation]!!)
         lyricSwitcher.layoutParams = layoutParams
     }
 
     override fun makeView(): View {
-        // 初始化文字，并设置渐变色
-        val lyricView = RainbowTextView(context, textColor1, textColor2)
+        // 初始化文字
+        val lyricView = RainbowTextView(context)
         // 设置文字大小
         lyricView.textSize = textSize
+        // 设置文字颜色
+        lyricView.setTextColor(textColor1.color().toInt())
         // 设置文字单行
         lyricView.setSingleLine()
         lyricView.maxLines = 1
@@ -145,16 +145,13 @@ class SuperLyricView : RelativeLayout, ViewSwitcher.ViewFactory {
         // 设置跑马灯速度
         lyricView.marqueeRepeatLimit = 1
         // 设置文字居中
-        lyricView.gravity = Gravity.CENTER
+        lyricView.gravity = rule[textLocation]!!
+        //lyricView.textAlignment = View.TEXT_ALIGNMENT_CENTER
         // 延迟200ms后跑马灯
         lyricView.isSelected = false
-        postDelayed({
-            lyricView.requestFocus()
-            lyricView.isSelected = true
-        }, 200)
         // 设置动态渐变
         if (rainbowEnable) {
-            lyricView.startAnimation(rainbowDuration.toLong())
+            //lyricView.startAnimation(rainbowDuration.toLong())
         }
         return lyricView
     }

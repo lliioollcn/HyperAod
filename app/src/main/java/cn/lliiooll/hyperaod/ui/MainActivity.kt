@@ -17,6 +17,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import cn.lliiooll.hyperaod.ui.page.HomePage
 import cn.lliiooll.hyperaod.ui.page.LyricPage
+import cn.lliiooll.hyperaod.ui.page.OthersPage
 import cn.lliiooll.hyperaod.ui.theme.HyperAodTheme
 
 class MainActivity : ComponentActivity() {
@@ -47,6 +48,9 @@ fun MainPage(modifier: Modifier = Modifier, navController: NavHostController = r
             }
             composable("hiktokoto") {
                 //HomePage.view(navController)
+            }
+            composable("others") {
+                OthersPage.view(navController)
             }
         }
     }

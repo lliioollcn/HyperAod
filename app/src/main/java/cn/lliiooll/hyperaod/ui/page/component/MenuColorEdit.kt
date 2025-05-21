@@ -1,6 +1,7 @@
 package cn.lliiooll.hyperaod.ui.page.component
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
@@ -23,7 +24,9 @@ object MenuColorEdit {
                     .height(30.dp)
                     .width(45.dp)
                     .padding(end = 5.dp)
-                    .background(color(text), RoundedCornerShape(3.dp)), horizontalArrangement = Arrangement.Center,
+                    .background(color(text), RoundedCornerShape(3.dp))
+                    .border(1.dp, Color.Black, RoundedCornerShape(3.dp)),
+                horizontalArrangement = Arrangement.Center,
                 verticalAlignment = Alignment.CenterVertically
             ) {
 

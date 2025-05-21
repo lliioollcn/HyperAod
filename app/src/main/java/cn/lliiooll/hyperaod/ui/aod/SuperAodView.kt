@@ -68,6 +68,8 @@ class SuperAodView : RelativeLayout {
             lyricView.layoutParams = lyricLayoutParams
             addView(lyricView)
             YLog.debug("Add SuperLyricView success")
+            //hooker.fresh(maml)
+            //lyricView.setText("我 是 一 个 很 长 很 长 很 长 很 长 很 长 很 长 的 文 本")
             // 开始监听歌词
             SuperLyricStub.init {
                 YLog.debug("SuperLyricView wakeup 1000ms")
