@@ -35,6 +35,7 @@ object MenuColorEdit {
                 modifier = Modifier
                     .height(30.dp)
                     .width(200.dp)
+                    .padding(end = 10.dp)
                     .background(Color.LightGray, RoundedCornerShape(3.dp)), horizontalArrangement = Arrangement.Center,
                 verticalAlignment = Alignment.CenterVertically
             ) {

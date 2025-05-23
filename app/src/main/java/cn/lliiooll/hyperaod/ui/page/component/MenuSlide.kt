@@ -2,6 +2,7 @@ package cn.lliiooll.hyperaod.ui.page.component
 
 import android.icu.text.DecimalFormat
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardOptions
@@ -58,7 +59,8 @@ object MenuSlide {
                     onInputChanged(it)
                 }, modifier = Modifier
                     .width(200.dp)
-                    .height(20.dp),
+                    .height(20.dp)
+                    .padding(end = 10.dp),
                 valueRange = range
             )
         })
