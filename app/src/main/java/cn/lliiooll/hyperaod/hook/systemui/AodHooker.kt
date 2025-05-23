@@ -16,7 +16,7 @@ object AodHooker : YukiBaseHooker() {
                     .any()!!
                     .javaClass
                     .classLoader!!
-                YLog.debug("Attached plugin classloader ")
+                //YLog.debug("Attached plugin classloader ")
                 // 加载hook
                 loadHooker(DozePluginHooker(pluginLoader))
                 loadHooker(AodViewHooker(pluginLoader))

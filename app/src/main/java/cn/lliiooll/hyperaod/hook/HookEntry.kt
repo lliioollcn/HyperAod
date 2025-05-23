@@ -1,5 +1,6 @@
 package cn.lliiooll.hyperaod.hook
 
+import cn.lliiooll.hyperaod.BuildConfig
 import cn.lliiooll.hyperaod.hook.systemui.AodHooker
 import com.highcapable.yukihookapi.annotation.xposed.InjectYukiHookWithXposed
 import com.highcapable.yukihookapi.hook.factory.configs
@@ -12,9 +13,9 @@ class HookEntry : IYukiHookXposedInit {
     override fun onInit() = configs {
         debugLog {
             tag = "HyperAod"
-            isEnable = true
+            isEnable = BuildConfig.DEBUG
         }
-        isDebug = true
+        isDebug = BuildConfig.DEBUG
     }
 
     override fun onHook() = encase {

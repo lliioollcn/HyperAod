@@ -10,14 +10,14 @@ object SuperLyricStub : ISuperLyric.Stub() {
     private var receiver: (data: SuperLyricData) -> Unit = { }
 
     override fun onStop(p0: SuperLyricData?) {
-        YLog.info("Lyric stop")
+        //YLog.info("Lyric stop")
         if (p0 != null) receiver.invoke(p0)
     }
 
     @SuppressLint("ResourceType")
     override fun onSuperLyric(p0: SuperLyricData?) {
         val lyric = p0?.lyric
-        YLog.info("Receive lyric $lyric")
+        //YLog.info("Receive lyric $lyric")
         if (p0 != null) receiver.invoke(p0)
     }
 

@@ -158,7 +158,7 @@ class SuperLyricView : RelativeLayout, ViewSwitcher.ViewFactory {
 
     fun setText(text: String) {
         if (text.isBlank()) return
-        YLog.debug("SuperLyricView switcher to $text")
+        //YLog.debug("SuperLyricView switcher to $text")
         post {
             lyricSwitcher.setText(text)
         }

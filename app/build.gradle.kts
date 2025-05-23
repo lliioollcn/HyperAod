@@ -45,7 +45,6 @@ android {
 dependencies {
 
 
-
     implementation("com.github.HChenX:SuperLyricApi:1.4")
     implementation("com.highcapable.yukihookapi:api:1.2.1")
     compileOnly("de.robv.android.xposed:api:82")

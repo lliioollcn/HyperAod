@@ -19,7 +19,7 @@ class DozePluginHooker(pluginClassLoader: ClassLoader) : BaseAodHooker(pluginCla
                 val ctx = instance.javaClass.field { name("sysuiContext") }.get(instance).any()
                 if (ctx != null) {
                     SuperLyricTool.registerSuperLyric(ctx as Context, SuperLyricStub)
-                    YLog.debug("register superLyric success")
+                    //YLog.debug("register superLyric success")
                 }
             }
         dozeServicePluginImplClazz
@@ -30,7 +30,7 @@ class DozePluginHooker(pluginClassLoader: ClassLoader) : BaseAodHooker(pluginCla
                 val ctx = instance.javaClass.field { name("sysuiContext") }.get(instance).any()
                 if (ctx != null) {
                     SuperLyricTool.unregisterSuperLyric(ctx as Context, SuperLyricStub)
-                    YLog.debug("unregister superLyric success")
+                    //YLog.debug("unregister superLyric success")
                 }
             }
 

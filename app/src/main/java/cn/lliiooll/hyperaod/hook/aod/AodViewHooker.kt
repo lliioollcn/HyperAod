@@ -40,7 +40,7 @@ class AodViewHooker(pluginClassLoader: ClassLoader) : BaseAodHooker(pluginClassL
                 }
 
                 parent.addView(superAodView)
-                YLog.debug("Add SuperAodView success")
+                //YLog.debug("Add SuperAodView success")
             }
         }
 
@@ -59,7 +59,7 @@ class AodViewHooker(pluginClassLoader: ClassLoader) : BaseAodHooker(pluginClassL
             val task = host.javaClass.field { name("mPauseTask") }.get(host).any()!!
             host.javaClass.method { name("fresh") }.give()?.invoke(host)
             val inf = prefs.getBoolean("others.infgif", false)
-            YLog.debug("Inf : $inf")
+            //YLog.debug("Inf : $inf")
             task.javaClass.method { name("execute") }.give()?.invoke(task, 5000L)
             if (inf) {
                 task.javaClass.method { name("execute") }.give()?.invoke(task, 60000L)
@@ -69,7 +69,7 @@ class AodViewHooker(pluginClassLoader: ClassLoader) : BaseAodHooker(pluginClassL
 
     private fun look(view: ViewGroup): ViewGroup {
         for (v in view.children) {
-            YLog.debug("Looking for ${v.javaClass.name}")
+            //YLog.debug("Looking for ${v.javaClass.name}")
             if (v.javaClass.name == "com.miui.maml.component.MamlView") return v as ViewGroup
             if (v is ViewGroup) {
                 look(v)
