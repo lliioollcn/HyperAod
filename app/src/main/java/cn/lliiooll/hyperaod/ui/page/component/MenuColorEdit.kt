@@ -11,7 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import cn.lliiooll.hyperaod.color
+import cn.lliiooll.hyperaod.utils.color
 
 object MenuColorEdit {
     @Composable

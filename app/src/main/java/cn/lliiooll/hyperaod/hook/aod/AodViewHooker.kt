@@ -1,15 +1,12 @@
 package cn.lliiooll.hyperaod.hook.aod
 
 import android.annotation.SuppressLint
-import android.graphics.Color
 import android.os.Handler
 import android.os.Looper
 import android.view.Gravity
 import android.view.ViewGroup
-import android.widget.FrameLayout
 import android.widget.LinearLayout
 import androidx.core.view.children
-import androidx.core.view.setPadding
 import cn.lliiooll.hyperaod.ui.aod.SuperAodView
 import com.highcapable.yukihookapi.hook.factory.field
 import com.highcapable.yukihookapi.hook.factory.method

@@ -15,6 +15,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import cn.lliiooll.hyperaod.ui.page.AboutPage
 import cn.lliiooll.hyperaod.ui.page.HomePage
 import cn.lliiooll.hyperaod.ui.page.LyricPage
 import cn.lliiooll.hyperaod.ui.page.OthersPage
@@ -51,6 +52,9 @@ fun MainPage(modifier: Modifier = Modifier, navController: NavHostController = r
             }
             composable("others") {
                 OthersPage.view(navController)
+            }
+            composable("about") {
+                AboutPage.view(navController)
             }
         }
     }

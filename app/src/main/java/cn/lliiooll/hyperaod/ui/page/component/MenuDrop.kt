@@ -1,7 +1,6 @@
 package cn.lliiooll.hyperaod.ui.page.component
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.DropdownMenu

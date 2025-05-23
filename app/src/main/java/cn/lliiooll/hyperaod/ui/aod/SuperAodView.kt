@@ -1,6 +1,5 @@
 package cn.lliiooll.hyperaod.ui.aod
 
-import android.content.Context
 import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.widget.RelativeLayout

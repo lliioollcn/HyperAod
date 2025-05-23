@@ -8,7 +8,7 @@ import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import android.view.animation.TranslateAnimation
 import android.widget.*
-import cn.lliiooll.hyperaod.color
+import cn.lliiooll.hyperaod.utils.color
 import cn.lliiooll.hyperaod.ui.aod.text.RainbowTextView
 import com.highcapable.yukihookapi.hook.log.YLog
 
