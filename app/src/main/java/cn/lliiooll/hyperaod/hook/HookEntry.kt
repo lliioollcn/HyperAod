@@ -4,8 +4,6 @@ import cn.lliiooll.hyperaod.hook.systemui.AodHooker
 import com.highcapable.yukihookapi.annotation.xposed.InjectYukiHookWithXposed
 import com.highcapable.yukihookapi.hook.factory.configs
 import com.highcapable.yukihookapi.hook.factory.encase
-import com.highcapable.yukihookapi.hook.factory.method
-import com.highcapable.yukihookapi.hook.log.YLog
 import com.highcapable.yukihookapi.hook.xposed.proxy.IYukiHookXposedInit
 
 @InjectYukiHookWithXposed
@@ -24,6 +22,7 @@ class HookEntry : IYukiHookXposedInit {
             loadHooker(AodHooker)
 
         }
+        /*
         loadApp("com.netease.cloudmusic") {
             //setMediaMetadata() called with: title = [
             "gn0.h".toClass()
@@ -34,5 +33,7 @@ class HookEntry : IYukiHookXposedInit {
 
                 }
         }
+
+         */
     }
 }
